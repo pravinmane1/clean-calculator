@@ -11,38 +11,49 @@ import { IBehavior, IButton } from './interfaces';
 export class AppComponent {
   public buttonConfigs: IButton[][] = buttonConfigs;
   public preView: string = '';
-  public answer: string = '= 0';
+  public answer: string = '0';
+  public operators = ['+', '-', '/', '*', '%'];
   title = 'clean-calculator';
 
   public onButtonClick(behavior: IBehavior | undefined) {
     if (!behavior) {
       return;
     }
+    const lastChar = this.preView[this.preView.length - 1];
+
+    if (lastChar === '.' && behavior.functionType !== FunctionTypes.DIGIT) {
+      return;
+    }
 
     switch (behavior.functionType) {
       case FunctionTypes.ALLCLEAR:
         this.preView = '';
-        this.answer = '= 0';
         break;
       case FunctionTypes.BACKSPACE:
-        this.preView = this.preView.slice(0, this.preView.length-1);
-
+        this.preView = this.preView.slice(0, this.preView.length - 1);
         break;
       case FunctionTypes.CALCULATE:
         this.preView = 'todo';
-        this.answer = '= todo';
         break;
       case FunctionTypes.DIGIT:
-        this.preView +=behavior.value;
-        this.answer = '= 0';
+        this.preView += behavior.value;
         break;
       case FunctionTypes.DOT:
-        this.preView +='.';
-        this.answer = this.preView;
+        if (!this.preView.length) {
+          this.preView += '0.';
+        } else {
+          if (this.operators.includes(lastChar)) {
+            this.preView += '0.';
+          } else if (lastChar !== '.') {
+            this.preView += '.';
+          }
+        }
         break;
       case FunctionTypes.OPERATOR:
-        this.preView +=behavior.value;
-        this.answer = '= 0';
+        if (this.operators.includes(lastChar)) {
+          return;
+        }
+        this.preView += behavior.value;
         break;
     }
   }

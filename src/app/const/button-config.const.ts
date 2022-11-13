@@ -6,12 +6,12 @@ const buttonConfigs: IButton[][] = [
     {
       displyType: 'text',
       displayText: 'ac',
-      behavior: { functionType: FunctionTypes.ALLCLEAR },
+      behavior: { functionType: FunctionTypes.ALLCLEAR, value: '' },
     },
     {
       displyType: 'text',
       displayText: '<-',
-      behavior: { functionType: FunctionTypes.BACKSPACE },
+      behavior: { functionType: FunctionTypes.BACKSPACE, value: '' },
     },
     {
       displyType: 'text',
@@ -100,12 +100,12 @@ const buttonConfigs: IButton[][] = [
     {
       displyType: 'text',
       displayText: '.',
-      behavior: { functionType: FunctionTypes.DOT },
+      behavior: { functionType: FunctionTypes.DOT, value: '' },
     },
     {
       displyType: 'text',
       displayText: '=',
-      behavior: { functionType: FunctionTypes.CALCULATE },
+      behavior: { functionType: FunctionTypes.CALCULATE, value: '' },
     },
   ],
 ];

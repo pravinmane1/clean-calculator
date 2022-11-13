@@ -2,7 +2,7 @@ import { FunctionTypes } from '../enums';
 
 export default interface IBehavior {
   functionType: FunctionTypes;
-  value?:
+  value:
     | '0'
     | '1'
     | '2'
@@ -17,5 +17,6 @@ export default interface IBehavior {
     | '-'
     | '/'
     | '*'
-    | '%';
+    | '%'
+    | '';
 }
