@@ -10,12 +10,12 @@ import { IBehavior, IButton } from './interfaces';
 })
 export class AppComponent {
   public buttonConfigs: IButton[][] = buttonConfigs;
-  public preView: string = '';
-  public answer: string = '0';
+  public preView = '';
+  public answer = '0';
   public operators = ['+', '-', '/', '*', '%'];
   title = 'clean-calculator';
 
-  public onButtonClick(behavior: IBehavior | undefined) {
+  public onButtonClick(behavior: IBehavior | undefined):void {
     if (!behavior) {
       return;
     }
