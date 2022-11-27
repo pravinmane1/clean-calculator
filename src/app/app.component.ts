@@ -15,7 +15,7 @@ export class AppComponent {
   public operators = ['+', '-', '/', '*', '%'];
   title = 'clean-calculator';
 
-  public onButtonClick(behavior: IBehavior | undefined):void {
+  public onButtonClick(behavior: IBehavior | undefined): void {
     if (!behavior) {
       return;
     }
