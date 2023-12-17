@@ -1,17 +1,26 @@
 <div class="container">
-  <div class="top-preview">
-    <div class="row">Preview(from pipeline): {{ preView }}</div>
-    <div class="row">{{ answer }}</div>
-  </div>
-  <div class="rows">
-    <ng-container *ngFor="let buttonRow of buttonConfigs">
-      <div class="row">
-        <ng-container *ngFor="let button of buttonRow">
-          <div class="row-item" (click)="onButtonClick(button.behavior)">
-            {{ button.displayText }}
-          </div>
-        </ng-container>
+  <div class="calculator">
+    <div class="top-preview">
+      <div class="align-end">
+        <div class="text">{{ preView }}</div>
       </div>
-    </ng-container>
+      <div class="align-end">
+        <div class="text">{{ answer }}</div>
+      </div>
+    </div>
+    <div class="rows">
+      <ng-container *ngFor="let buttonRow of buttonConfigs">
+        <div class="row">
+          <ng-container *ngFor="let button of buttonRow">
+            <div
+              class="row-item noselect"
+              (click)="onButtonClick(button.behavior)"
+            >
+              {{ button.displayText }}
+            </div>
+          </ng-container>
+        </div>
+      </ng-container>
+    </div>
   </div>
 </div>

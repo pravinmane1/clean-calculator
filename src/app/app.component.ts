@@ -33,7 +33,7 @@ export class AppComponent {
         this.preView = this.preView.slice(0, this.preView.length - 1);
         break;
       case FunctionTypes.CALCULATE:
-        this.preView = 'todo';
+        this.answer = 'todo';
         break;
       case FunctionTypes.DIGIT:
         this.preView += behavior.value;
