@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { buttonConfigs } from './const';
 import { FunctionTypes } from './enums';
 import { IBehavior, IButton } from './interfaces';
+import { CalculateService } from './services/calculate.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ export class AppComponent {
   public preView = '';
   public answer = '0';
   public operators = ['+', '-', '/', '*', '%'];
-  title = 'clean-calculator';
+
+  constructor(private calculateService: CalculateService) {}
 
   public onButtonClick(behavior: IBehavior | undefined): void {
     if (!behavior) {
@@ -28,12 +30,13 @@ export class AppComponent {
     switch (behavior.functionType) {
       case FunctionTypes.ALLCLEAR:
         this.preView = '';
+        this.answer = '0';
         break;
       case FunctionTypes.BACKSPACE:
         this.preView = this.preView.slice(0, this.preView.length - 1);
         break;
       case FunctionTypes.CALCULATE:
-        this.answer = 'todo';
+        this.answer = this.calculateService.calculateExpression(this.preView);
         break;
       case FunctionTypes.DIGIT:
         this.preView += behavior.value;

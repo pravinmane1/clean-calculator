@@ -17,11 +17,6 @@
       margin: 2px;
       text-align: center;
       border-radius: 50%;
-      background-color: aquamarine;
-    }
-
-    .row-item:hover {
-      background-color: aqua;
     }
   }
 }
@@ -29,6 +24,10 @@
 .calculator {
   display: flex;
   flex-flow: column nowrap;
+  border: 0.5px solid rgba(128, 128, 128, 0.688);
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 8px 11px 5px #dbcccc9c;
 }
 
 .container {
@@ -56,4 +55,38 @@
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
+}
+
+.orange {
+  background-color: orange;
+}
+
+.light-grey {
+  background-color: #80808094;
+}
+
+.dark-grey {
+  background-color: grey;
+  color: white;
+}
+
+.orange:hover {
+  background-color: rgb(255, 132, 0);
+}
+
+.light-grey:hover {
+  background-color: #80808049;
+}
+
+.dark-grey:hover {
+  background-color: rgba(102, 102, 102, 0.999);
+  color: white;
+}
+
+.top-preview {
+  font-size: 26px;
+  border: 1px solid #c5c5c5;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  padding: 5px;
 }

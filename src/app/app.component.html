@@ -5,7 +5,7 @@
         <div class="text">{{ preView }}</div>
       </div>
       <div class="align-end">
-        <div class="text">{{ answer }}</div>
+        <div class="text">= {{ answer }}</div>
       </div>
     </div>
     <div class="rows">
@@ -13,7 +13,7 @@
         <div class="row">
           <ng-container *ngFor="let button of buttonRow">
             <div
-              class="row-item noselect"
+              class="{{ 'row-item noselect ' + button.class }}"
               (click)="onButtonClick(button.behavior)"
             >
               {{ button.displayText }}
