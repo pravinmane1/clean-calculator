@@ -160,5 +160,7 @@
       }
     }
   },
-  "defaultProject": "clean-calculator"
+  "cli": {
+    "analytics": false
+  }
 }
