@@ -95,21 +95,21 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "clean-calculator:build"
+            "buildTarget": "clean-calculator:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "clean-calculator:build:production"
+              "buildTarget": "clean-calculator:build:production"
             },
             "development": {
-              "browserTarget": "clean-calculator:build:development"
+              "buildTarget": "clean-calculator:build:development"
            }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "clean-calculator:build"
+            "buildTarget": "clean-calculator:build"
           }
         },
         "test": {
