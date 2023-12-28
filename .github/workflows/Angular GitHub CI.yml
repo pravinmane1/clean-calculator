@@ -40,7 +40,7 @@ jobs:
 
       - name: Build
         run: |
-          npm run build --configuration production
+          npm run build
 
       # - name: Lint
       #   run: |
