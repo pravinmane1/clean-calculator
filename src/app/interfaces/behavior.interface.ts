@@ -18,5 +18,8 @@ export default interface IBehavior {
     | '/'
     | '*'
     | '%'
-    | '';
+    | ''
+    | 'Backspace'
+    | 'Enter'
+    | '.';
 }

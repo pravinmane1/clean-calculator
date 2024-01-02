@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { buttonConfigs } from './const';
 import { FunctionTypes } from './enums';
 import { IBehavior, IButton } from './interfaces';
@@ -16,6 +16,22 @@ export class AppComponent {
   public operators = ['+', '-', '/', '*', '%'];
 
   constructor(private calculateService: CalculateService) {}
+
+  @HostListener('window:keyup', ['$event'])
+  keyEvent(event: KeyboardEvent) {
+    let buttonConfig: IButton;
+    for (const configList of buttonConfigs) {
+      const config = configList.find(
+        (config) => config.behavior?.value === event.key
+      );
+
+      if (config) {
+        buttonConfig = config;
+        this.onButtonClick(buttonConfig.behavior);
+        break;
+      }
+    }
+  }
 
   public onButtonClick(behavior: IBehavior | undefined): void {
     if (!behavior) {

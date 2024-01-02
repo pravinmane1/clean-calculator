@@ -1,11 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+
+$clr-primary-400: #ffa500;
+$clr-primary-500: #ff8400;
+
+$clr-secondary-400: #80808049;
+$clr-secondary-500: #80808094;
+$clr-secondary-600: #808080;
+$clr-secondary-700: #666666ff;
+$clr-secondary-800: #808080af;
+$clr-secondary-900: #c5c5c5;
+
+$clr-neutral-100: hsl(100, 100%, 100%);
+$clr-neutral-200: #dbcccc9c;
+$clr-neutral-900: hsl(0, 0%, 0%);
+
+$ff-primary: "Montserrat", sans-serif;
+
+$fw-regular: 300;
+$fw-semi-bold: 400;
+$fw-bold: 500;
+
+$fs-100: 0.3125rem; //5
+$fs-200: 0.9375rem; //15
+$fs-250: 1rem; //16
+$fs-300: 1.125rem; //18
+$fs-400: 1.25rem; //20
+$fs-500: 1.625rem; //26
+$fs-600: 1.875rem; //30
+$fs-700: 3.75rem; //60
+
 /* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
 
 $clr-red: aliceblue;
 
@@ -37,6 +66,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* A elements that don't have a class get default styles */
@@ -46,7 +76,8 @@ a:not([class]) {
 
 /* Make images easier to work with */
 img,
-picture {
+picture,
+svg {
   max-width: 100%;
   display: block;
 }
@@ -65,4 +96,59 @@ picture {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Utility classes */
+
+.text-neutral-900 {
+  color: $clr-neutral-900;
+}
+.text-neutral-100 {
+  color: $clr-neutral-100;
+}
+
+.bg-primary-400 {
+  background-color: $clr-primary-400;
+}
+.bg-primary-500 {
+  background-color: $clr-primary-500;
+}
+.bg-secondary-400 {
+  background-color: $clr-secondary-400;
+}
+.bg-secondary-500 {
+  background-color: $clr-secondary-500;
+}
+.bg-secondary-600 {
+  background-color: $clr-secondary-600;
+}
+.bg-secondary-700 {
+  background-color: $clr-secondary-700;
+}
+
+.fw-regular {
+  font-weight: $fw-regular;
+}
+.fw-semi-bold {
+  font-weight: $fw-semi-bold;
+}
+.fw-bold {
+  font-weight: $fw-bold;
+}
+
+.fs-250 {
+  font-size: $fs-250;
+}
+.fs-500 {
+  font-size: $fs-500;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
 }

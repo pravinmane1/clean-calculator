@@ -17,5 +17,5 @@ export default interface IButton {
     | any;
   iconUrl?: string;
   behavior?: IBehavior;
-  class: 'orange' | 'light-grey' | 'dark-grey' | '';
+  class: 'bg-primary-400' | 'bg-secondary-500' | 'bg-secondary-600' | '';
 }

@@ -9,13 +9,13 @@
     flex-direction: row;
 
     .row-item {
-      padding: 15px;
+      padding: 0.9375rem;
       cursor: pointer;
-      width: 60px;
-      height: 60px;
-      line-height: 30px;
-      min-width: 60px;
-      min-height: 60px;
+      width: 3.75rem;
+      height: 3.75rem;
+      line-height: 1.875rem;
+      min-width: 3.75rem;
+      min-height: 3.75rem;
       margin: 2px;
       text-align: center;
       border-radius: 50%;
@@ -24,13 +24,11 @@
 }
 
 .calculator {
-  display: flex;
-  flex-flow: column nowrap;
-  border: 0.5px solid rgba(128, 128, 128, 0.688);
-  padding: 30px;
-  border-radius: 30px;
-  box-shadow: 8px 11px 5px #dbcccc9c;
-  background: white;
+  border: 0.5px solid $clr-secondary-800;
+  padding: 1.875rem;
+  border-radius: 1.875rem;
+  box-shadow: 8px 11px 5px $clr-neutral-200;
+  background: $clr-neutral-100;
 }
 
 .container {
@@ -44,56 +42,36 @@
 
 .align-end {
   text-align: end;
-  padding: 5px 15px;
-  min-height: 18px;
+  padding: 0.3125rem 0.9375rem;
   display: flex;
 
   .text {
     flex-grow: 1;
     width: 0;
+    word-break: break-all;
+    min-height: 1.625rem;
+    line-height: 1.625rem;
   }
 }
 
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome and Opera */
+.bg-secondary-600 {
+  color: $clr-neutral-100;
+}
+.bg-secondary-500:hover {
+  background-color: $clr-secondary-400;
 }
 
-.orange {
-  background-color: orange;
+.bg-secondary-600:hover {
+  background-color: $clr-secondary-700;
 }
 
-.light-grey {
-  background-color: #80808094;
-}
-
-.dark-grey {
-  background-color: grey;
-  color: white;
-}
-
-.orange:hover {
-  background-color: rgb(255, 132, 0);
-}
-
-.light-grey:hover {
-  background-color: #80808049;
-}
-
-.dark-grey:hover {
-  background-color: rgba(102, 102, 102, 0.999);
-  color: white;
+.bg-primary-400:hover {
+  background-color: $clr-primary-500;
 }
 
 .top-preview {
-  font-size: 26px;
-  border: 1px solid #c5c5c5;
-  border-radius: 15px;
-  margin-bottom: 20px;
-  padding: 5px;
+  border: 1px solid $clr-secondary-900;
+  border-radius: 0.9375rem;
+  margin-bottom: 1.25rem;
+  padding: 0.3125rem;
 }
