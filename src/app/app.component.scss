@@ -1,3 +1,5 @@
+@import "src/styles.scss";
+
 .rows {
   display: flex;
   flex-direction: column;
@@ -9,11 +11,11 @@
     .row-item {
       padding: 15px;
       cursor: pointer;
-      width: 30px;
-      height: 30px;
+      width: 60px;
+      height: 60px;
       line-height: 30px;
-      min-width: 30px;
-      min-height: 30px;
+      min-width: 60px;
+      min-height: 60px;
       margin: 2px;
       text-align: center;
       border-radius: 50%;
@@ -34,7 +36,7 @@
 .container {
   display: flex;
   justify-content: center;
-  background: aliceblue;
+  background: $clr-red;
   flex-flow: row nowrap;
   align-items: center;
   height: 100%;
