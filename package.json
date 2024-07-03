@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng deploy --base-href=/clean-calculator/ --no-silent"
+    "deploy": "npm run build && npx angular-cli-ghpages --dir=dist/clean-calculator --cname=calculator.pravinmane.com --no-silent"
   },
   "private": true,
   "dependencies": {
